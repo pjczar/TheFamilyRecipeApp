@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <option value="cups">Cups</option>
                 <option value="grams">Grams</option>
                 <option value="ounces">Ounces</option>
+                <option value="pounds">Pounds</option>
                 <option value="milliliters">Milliliters (ml)</option>
                 <option value="teaspoons">Teaspoons (tsp)</option>
                 <option value="tablespoons">Tablespoons (tbsp)</option>

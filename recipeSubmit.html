@@ -55,11 +55,12 @@
 							<div id="ingredientsSection">
 								<h2>Ingredients</h2>
 								<div class="ingredient">
-									<input type="number" class="ingredient-quantity" name="ingredient-quantity[]" placeholder="Quantity">
+									<input type="number" class="ingredient-quantity" name="ingredient-quantity[]" placeholder="Quantity" min="0" steps="any">
 									<select class="ingredient-unit" name="ingredient-unit[]">
 										<option value="cups">Cups</option>
 										<option value="grams">Grams</option>
 										<option value="ounces">Ounces</option>
+										<option value="pounds">Pounds</option>
 										<option value="milliliters">Milliliters (ml)</option>
 										<option value="teaspoons">Teaspoons (tsp)</option>
 										<option value="tablespoons">Tablespoons (tbsp)</option>
@@ -83,9 +84,9 @@
 									<input type="text" class="ingredient-name" name="ingredient-name[]" placeholder="Ingredient Name">
 									<button type="button" class="remove-ingredient">Remove</button>
 								</div>
-								<button type="button" id="add-ingredient">Add Ingredient</button>
+								
 							</div>
-							
+							<button type="button" id="add-ingredient">Add Ingredient</button>
 							<button type="submit">Submit Recipe</button>
 						</form>
 					</div>
