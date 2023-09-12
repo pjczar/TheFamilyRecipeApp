@@ -49,22 +49,48 @@
 					<div class="inner">
 						<h1>Recipe Submission</h1>
 						<form id="recipeForm" method="post" action="/submit-recipe">
-							<label for="recipeName">Recipe Name:</label>
-							<input type="text" id="recipeName" name="recipeName" required><br>
+							<!-- Existing fields (Recipe Name, Instructions, and Image) -->
 				
-							<label for="ingredients">Ingredients:</label>
-							<textarea id="ingredients" name="ingredients" required></textarea><br>
-				
-							<label for="instructions">Instructions:</label>
-							<textarea id="instructions" name="instructions" required></textarea><br>
-				
-							<label for="image">Image:</label>
-							<input type="file" id="image" name="image"><br>
-				
+							<!-- Ingredients Section -->
+							<div id="ingredientsSection">
+								<h2>Ingredients</h2>
+								<div class="ingredient">
+									<input type="number" class="ingredient-quantity" name="ingredient-quantity[]" placeholder="Quantity">
+									<select class="ingredient-unit" name="ingredient-unit[]">
+										<option value="cups">Cups</option>
+										<option value="grams">Grams</option>
+										<option value="ounces">Ounces</option>
+										<option value="milliliters">Milliliters (ml)</option>
+										<option value="teaspoons">Teaspoons (tsp)</option>
+										<option value="tablespoons">Tablespoons (tbsp)</option>
+										<option value="fluid-drachms">Fluid Drachms (fl dr)</option>
+										<option value="fluid-scruples">Fluid Scruples (fl sc)</option>
+										<option value="fluid-minims">Fluid Minims (fl min)</option>
+										<option value="pints">Pints (pt)</option>
+										<option value="quarts">Quarts (qt)</option>
+										<option value="gallons">Gallons (gal)</option>
+										<option value="milligrams">Milligrams (mg)</option>
+										<option value="kilograms">Kilograms (kg)</option>
+										<option value="metric-cups">Metric Cups (mL)</option>
+										<option value="metric-liters">Metric Liters (L)</option>
+										<option value="imperial-cups">Imperial Cups (UK cup)</option>
+										<option value="imperial-fluid-ounces">Imperial Fluid Ounces (UK fl oz)</option>
+										<option value="imperial-pints">Imperial Pints (UK pt)</option>
+										<option value="imperial-quarts">Imperial Quarts (UK qt)</option>
+										<option value="imperial-gallons">Imperial Gallons (UK gal)</option>
+									</select>
+									
+									<input type="text" class="ingredient-name" name="ingredient-name[]" placeholder="Ingredient Name">
+									<button type="button" class="remove-ingredient">Remove</button>
+								</div>
+								<button type="button" id="add-ingredient">Add Ingredient</button>
+							</div>
+							
 							<button type="submit">Submit Recipe</button>
 						</form>
 					</div>
 				</div>
+				
 				
 
 				<!-- Footer -->
@@ -116,6 +142,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="assets/js/recipeSubmit.js"></script>
 	</body>
 </html>
