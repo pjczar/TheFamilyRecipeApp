@@ -48,14 +48,15 @@
 				<div id="main">
 					<div class="inner">
 						<h1>Recipe Submission</h1>
-						<form id="recipeForm" method="post" action="/submit-recipe">
+						<form id="recipeForm">
+							<input type="text" id="title" name="title" placeholder="Recipe Title" required>
 							<!-- Existing fields (Recipe Name, Instructions, and Image) -->
 				
 							<!-- Ingredients Section -->
 							<div id="ingredientsSection">
 								<h2>Ingredients</h2>
 								<div class="ingredient">
-									<input type="number" class="ingredient-quantity" name="ingredient-quantity[]" placeholder="Quantity" min="0" steps="any">
+									<input type="number" class="ingredient-quantity" name="ingredient-quantity[]" placeholder="Quantity" min="0" steps="any" required>
 									<select class="ingredient-unit" name="ingredient-unit[]">
 										<option value="cups">Cups</option>
 										<option value="grams">Grams</option>
@@ -81,12 +82,17 @@
 										<option value="imperial-gallons">Imperial Gallons (UK gal)</option>
 									</select>
 									
-									<input type="text" class="ingredient-name" name="ingredient-name[]" placeholder="Ingredient Name">
+									<input type="text" class="ingredient-name" name="ingredient-name[]" placeholder="Ingredient Name" required>
 									<button type="button" class="remove-ingredient">Remove</button>
 								</div>
 								
 							</div>
 							<button type="button" id="add-ingredient">Add Ingredient</button>
+							<div>
+								<h2>Preparation</h2>
+								<input type="text" class="preparation" name="preparation[]" placeholder="Preparation" max="1500" required>
+							</div>
+							
 							<button type="submit">Submit Recipe</button>
 						</form>
 					</div>
